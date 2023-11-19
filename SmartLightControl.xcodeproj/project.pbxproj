@@ -11,6 +11,12 @@
 		DF0CCD312B0892D40058DE05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0CCD302B0892D40058DE05 /* ContentView.swift */; };
 		DF0CCD332B0892D50058DE05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF0CCD322B0892D50058DE05 /* Assets.xcassets */; };
 		DF0CCD362B0892D50058DE05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF0CCD352B0892D50058DE05 /* Preview Assets.xcassets */; };
+		DF0CCD402B089A700058DE05 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0CCD3F2B089A700058DE05 /* MainView.swift */; };
+		DF0CCD422B089EA90058DE05 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0CCD412B089EA90058DE05 /* HomeView.swift */; };
+		DF0CCD442B089EC00058DE05 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0CCD432B089EC00058DE05 /* SettingsView.swift */; };
+		DF0CCD462B08A7F90058DE05 /* RoomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0CCD452B08A7F90058DE05 /* RoomCardView.swift */; };
+		DF0CCD482B08A8440058DE05 /* BaseRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0CCD472B08A8440058DE05 /* BaseRoom.swift */; };
+		DF0CCD4A2B08A8CE0058DE05 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0CCD492B08A8CE0058DE05 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		DF0CCD302B0892D40058DE05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DF0CCD322B0892D50058DE05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF0CCD352B0892D50058DE05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF0CCD3F2B089A700058DE05 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DF0CCD412B089EA90058DE05 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DF0CCD432B089EC00058DE05 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DF0CCD452B08A7F90058DE05 /* RoomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCardView.swift; sourceTree = "<group>"; };
+		DF0CCD472B08A8440058DE05 /* BaseRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoom.swift; sourceTree = "<group>"; };
+		DF0CCD492B08A8CE0058DE05 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +63,14 @@
 		DF0CCD2D2B0892D40058DE05 /* SmartLightControl */ = {
 			isa = PBXGroup;
 			children = (
+				DF0CCD3E2B089A280058DE05 /* Models */,
+				DF0CCD3D2B089A1F0058DE05 /* Views */,
+				DF0CCD3C2B089A030058DE05 /* ViewModels */,
 				DF0CCD2E2B0892D40058DE05 /* SmartLightControlApp.swift */,
 				DF0CCD302B0892D40058DE05 /* ContentView.swift */,
 				DF0CCD322B0892D50058DE05 /* Assets.xcassets */,
 				DF0CCD342B0892D50058DE05 /* Preview Content */,
+				DF0CCD492B08A8CE0058DE05 /* Theme.swift */,
 			);
 			path = SmartLightControl;
 			sourceTree = "<group>";
@@ -65,6 +81,32 @@
 				DF0CCD352B0892D50058DE05 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DF0CCD3C2B089A030058DE05 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DF0CCD3D2B089A1F0058DE05 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF0CCD3F2B089A700058DE05 /* MainView.swift */,
+				DF0CCD412B089EA90058DE05 /* HomeView.swift */,
+				DF0CCD432B089EC00058DE05 /* SettingsView.swift */,
+				DF0CCD452B08A7F90058DE05 /* RoomCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DF0CCD3E2B089A280058DE05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DF0CCD472B08A8440058DE05 /* BaseRoom.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0CCD442B089EC00058DE05 /* SettingsView.swift in Sources */,
+				DF0CCD4A2B08A8CE0058DE05 /* Theme.swift in Sources */,
 				DF0CCD312B0892D40058DE05 /* ContentView.swift in Sources */,
+				DF0CCD422B089EA90058DE05 /* HomeView.swift in Sources */,
+				DF0CCD402B089A700058DE05 /* MainView.swift in Sources */,
+				DF0CCD482B08A8440058DE05 /* BaseRoom.swift in Sources */,
 				DF0CCD2F2B0892D40058DE05 /* SmartLightControlApp.swift in Sources */,
+				DF0CCD462B08A7F90058DE05 /* RoomCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
