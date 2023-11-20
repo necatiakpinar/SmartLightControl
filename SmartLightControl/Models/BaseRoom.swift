@@ -4,10 +4,11 @@ class BaseRoom: Identifiable
 {
     let id: UUID
     let name: String
-    
-    init(id: UUID = UUID(), name: String) {
+    var appearances: [BaseAppearance]
+    init(id: UUID = UUID(), name: String, appearances: [BaseAppearance]) {
         self.id = id
         self.name = name
+        self.appearances = appearances
     }
     
 }
@@ -15,8 +16,8 @@ class BaseRoom: Identifiable
 extension BaseRoom {
     static var sampleData: [BaseRoom] =
     [
-        BaseRoom(name: "Playroom"),
-        BaseRoom(name: "Workstation")
+        BaseRoom(name: "Playroom", appearances: BaseAppearance.sampleData),
+        BaseRoom(name: "Workstation", appearances: BaseAppearance.sampleData)
     ]
     
     static let emptyData: [BaseRoom] = []

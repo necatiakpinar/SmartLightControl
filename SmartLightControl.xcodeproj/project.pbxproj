@@ -17,6 +17,10 @@
 		DF0CCD462B08A7F90058DE05 /* RoomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0CCD452B08A7F90058DE05 /* RoomCardView.swift */; };
 		DF0CCD482B08A8440058DE05 /* BaseRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0CCD472B08A8440058DE05 /* BaseRoom.swift */; };
 		DF0CCD4A2B08A8CE0058DE05 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0CCD492B08A8CE0058DE05 /* Theme.swift */; };
+		DF5CBD172B0BA1B9007DBFDF /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5CBD162B0BA1B9007DBFDF /* RoomViewModel.swift */; };
+		DF78249E2B0B64EA00C6EA52 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78249D2B0B64EA00C6EA52 /* RoomDetailView.swift */; };
+		DF7824A02B0B67B200C6EA52 /* AppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78249F2B0B67B200C6EA52 /* AppearanceView.swift */; };
+		DF7824A22B0B9BCB00C6EA52 /* BaseAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7824A12B0B9BCB00C6EA52 /* BaseAppearance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		DF0CCD452B08A7F90058DE05 /* RoomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCardView.swift; sourceTree = "<group>"; };
 		DF0CCD472B08A8440058DE05 /* BaseRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoom.swift; sourceTree = "<group>"; };
 		DF0CCD492B08A8CE0058DE05 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		DF5CBD162B0BA1B9007DBFDF /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
+		DF78249D2B0B64EA00C6EA52 /* RoomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
+		DF78249F2B0B67B200C6EA52 /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
+		DF7824A12B0B9BCB00C6EA52 /* BaseAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppearance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,7 @@
 		DF0CCD3C2B089A030058DE05 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DF5CBD162B0BA1B9007DBFDF /* RoomViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -97,6 +106,8 @@
 				DF0CCD412B089EA90058DE05 /* HomeView.swift */,
 				DF0CCD432B089EC00058DE05 /* SettingsView.swift */,
 				DF0CCD452B08A7F90058DE05 /* RoomCardView.swift */,
+				DF78249D2B0B64EA00C6EA52 /* RoomDetailView.swift */,
+				DF78249F2B0B67B200C6EA52 /* AppearanceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				DF0CCD472B08A8440058DE05 /* BaseRoom.swift */,
+				DF7824A12B0B9BCB00C6EA52 /* BaseAppearance.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,7 +194,11 @@
 				DF0CCD442B089EC00058DE05 /* SettingsView.swift in Sources */,
 				DF0CCD4A2B08A8CE0058DE05 /* Theme.swift in Sources */,
 				DF0CCD312B0892D40058DE05 /* ContentView.swift in Sources */,
+				DF7824A22B0B9BCB00C6EA52 /* BaseAppearance.swift in Sources */,
+				DF78249E2B0B64EA00C6EA52 /* RoomDetailView.swift in Sources */,
+				DF7824A02B0B67B200C6EA52 /* AppearanceView.swift in Sources */,
 				DF0CCD422B089EA90058DE05 /* HomeView.swift in Sources */,
+				DF5CBD172B0BA1B9007DBFDF /* RoomViewModel.swift in Sources */,
 				DF0CCD402B089A700058DE05 /* MainView.swift in Sources */,
 				DF0CCD482B08A8440058DE05 /* BaseRoom.swift in Sources */,
 				DF0CCD2F2B0892D40058DE05 /* SmartLightControlApp.swift in Sources */,

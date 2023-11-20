@@ -2,12 +2,13 @@ import SwiftUI
 
 struct MainView: View {
     
+    @Binding var rooms: [BaseRoom]
     @State private var activeTabIndex: Int = 1
     
     var body: some View {
         VStack {
             TabView(selection: $activeTabIndex) {
-                HomeView()
+                HomeView(rooms: $rooms)
                     .tabItem { Text("Home") }
                     .tag(1)
                 SettingsView()
@@ -31,6 +32,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(rooms: .constant(BaseRoom.sampleData))
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct SmartLightControlApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView(rooms: .constant(BaseRoom.sampleData))
         }
     }
 }

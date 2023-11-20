@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct RoomCardView:  View {
-    var room: BaseRoom
+    @Binding var room: BaseRoom
     @State private var isToggleOn: Bool = false;
     @State private var sliderValue: Double = 50
     
@@ -47,7 +47,7 @@ struct RoomCardView:  View {
 struct RoomCardView_Previews: PreviewProvider {
     
     static var previews: some View {
-        RoomCardView(room:BaseRoom.sampleData[0])
+        RoomCardView(room:.constant(BaseRoom.sampleData[0]))
     }
 }
 
