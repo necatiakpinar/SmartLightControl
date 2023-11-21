@@ -22,7 +22,7 @@ extension BaseAppearance {
         BaseAppearance(name: "Alan Wake 2"),
         BaseAppearance(name: "Space"),
         BaseAppearance(name: "Boxing"),
-        BaseAppearance(name: "Gaming"),
+        BaseAppearance(name: "Gaming"), //
         BaseAppearance(name: "Friends")
     ]
     
