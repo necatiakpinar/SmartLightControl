@@ -5,28 +5,35 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            
             List {
                 Section(header: Text("Rooms")) {
                     ForEach($rooms) { $room in
-                        RoomCardView(room: $room)
+                        ZStack {
+                            RoomCardView(room: $room)
+
+                            NavigationLink(destination: RoomDetailView(room: $room)) {
+                                EmptyView()
+                            }
+                            .opacity(0)
+                            
+                        }
+                        .background(Color.clear) // Make sure the back
                     
                     }
-                    
                 }
                 .listRowInsets(EdgeInsets())
-             
+                
             }
             .navigationTitle("Home")
+            
         }
-        .background(Color.red) // Set the background color here
-        
+        // Background color should be applied to the List or NavigationView
     }
 }
 
-
-struct HomesView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(rooms: .constant(BaseRoom.sampleData))
     }
 }
+
