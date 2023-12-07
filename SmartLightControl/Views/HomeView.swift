@@ -10,7 +10,7 @@ struct HomeView: View {
                     ForEach($rooms) { $room in
                         ZStack {
                             RoomCardView(room: $room)
-
+                            
                             NavigationLink(destination: RoomDetailView(room: $room)) {
                                 EmptyView()
                             }
@@ -18,7 +18,7 @@ struct HomeView: View {
                             
                         }
                         .background(Color.clear) // Make sure the back
-                    
+                        
                     }
                 }
                 .listRowInsets(EdgeInsets())
