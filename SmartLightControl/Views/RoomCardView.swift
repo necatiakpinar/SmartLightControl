@@ -33,7 +33,7 @@ struct RoomCardView:  View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.vertical, 15)
         .padding(.horizontal, 20)
-        .background(Theme.ColorScheme.primary.color)
+        .background(.purple)
         .foregroundColor(.white)
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .overlay(
