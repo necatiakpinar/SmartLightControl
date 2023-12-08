@@ -3,12 +3,11 @@ import SwiftUI
 struct RoomDetailView: View {
     @Binding var room: BaseRoom
     
-    private let rows = [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 0)]
+    private let rows = [GridItem(.flexible(), spacing: 0), GridItem(.flexible(), spacing: 0)]
     
     var body: some View {
-        VStack(alignment: .leading) { // VStack eklendi
+        VStack(alignment: .leading) {
             
-            List {
                 Section(header:Text("Appearances"))
                 {
                     ScrollView(.horizontal, showsIndicators: false) {
@@ -17,26 +16,39 @@ struct RoomDetailView: View {
                                 AppearanceView(appearance: appearance)
                                     .padding()
                                     .frame(maxWidth: .infinity)
-                                    .background(Color.gray)
                                     .cornerRadius(10)
                             }
                         }
-                        //.padding([.bottom], ) // ScrollView alt paddingi eklendi
+                    }
+                    .frame(height: 300)
+                    .background(Color(UIColor.systemGroupedBackground))
+                    
+                }
+                
+                
+            
+            List {
+                Section(header:Text("Lights"))
+                {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHGrid(rows: rows, spacing: 10) {
+                            ForEach(room.appearances) { appearance in
+                                AppearanceView(appearance: appearance)
+                                    .padding()
+                                    .frame(maxWidth: .infinity)
+                                    .cornerRadius(10)
+                            }
+                        }
                     }
                 }
                 .listRowBackground(Color.clear)
                 
-                
-                Text("test")
-                    .padding()
-                    .listRowBackground(Color.clear)
-                
-                
             }
             
-            
-            
         }
+        .background(Color(UIColor.systemGroupedBackground))
+
+        
     }
 }
 struct RoomDetailView_PreviewProvider: PreviewProvider{

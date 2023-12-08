@@ -11,11 +11,12 @@ struct AppearanceView: View {
                 .frame(width: 40, height: 40)
                 .background(.orange)
                 .clipShape(Circle())
+                .padding(.bottom, 10)
             
-            Text(appearance.name).bold()
+            Text(appearance.name).bold().font(.system(size: 13))
             
         }
-        .frame(width: 100, height: 100)
+        .frame(width: 110, height: 120)
         .background(Theme.ColorScheme.primary.color)
         .foregroundColor(.white)
         .clipShape(RoundedRectangle(cornerRadius: 20))
