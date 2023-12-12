@@ -2,7 +2,7 @@ import SwiftUI
 
 struct RoomCardView:  View {
     @Binding var room: BaseRoom
-    @State private var isToggleOn: Bool = false;
+    @State private var isToggleOn: Bool = false
     @State private var sliderValue: Double = 50
     
     var body: some View {

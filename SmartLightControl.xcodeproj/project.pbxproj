@@ -21,6 +21,8 @@
 		DF78249E2B0B64EA00C6EA52 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78249D2B0B64EA00C6EA52 /* RoomDetailView.swift */; };
 		DF7824A02B0B67B200C6EA52 /* AppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78249F2B0B67B200C6EA52 /* AppearanceView.swift */; };
 		DF7824A22B0B9BCB00C6EA52 /* BaseAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7824A12B0B9BCB00C6EA52 /* BaseAppearance.swift */; };
+		DFF4CE412B28D7EB0057FC8F /* BaseLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4CE402B28D7EB0057FC8F /* BaseLight.swift */; };
+		DFF4CE432B28DF060057FC8F /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4CE422B28DF060057FC8F /* LightView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		DF78249D2B0B64EA00C6EA52 /* RoomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
 		DF78249F2B0B67B200C6EA52 /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
 		DF7824A12B0B9BCB00C6EA52 /* BaseAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppearance.swift; sourceTree = "<group>"; };
+		DFF4CE402B28D7EB0057FC8F /* BaseLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLight.swift; sourceTree = "<group>"; };
+		DFF4CE422B28DF060057FC8F /* LightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 				DF0CCD452B08A7F90058DE05 /* RoomCardView.swift */,
 				DF78249D2B0B64EA00C6EA52 /* RoomDetailView.swift */,
 				DF78249F2B0B67B200C6EA52 /* AppearanceView.swift */,
+				DFF4CE422B28DF060057FC8F /* LightView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			children = (
 				DF0CCD472B08A8440058DE05 /* BaseRoom.swift */,
 				DF7824A12B0B9BCB00C6EA52 /* BaseAppearance.swift */,
+				DFF4CE402B28D7EB0057FC8F /* BaseLight.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +202,8 @@
 				DF0CCD312B0892D40058DE05 /* ContentView.swift in Sources */,
 				DF7824A22B0B9BCB00C6EA52 /* BaseAppearance.swift in Sources */,
 				DF78249E2B0B64EA00C6EA52 /* RoomDetailView.swift in Sources */,
+				DFF4CE432B28DF060057FC8F /* LightView.swift in Sources */,
+				DFF4CE412B28D7EB0057FC8F /* BaseLight.swift in Sources */,
 				DF7824A02B0B67B200C6EA52 /* AppearanceView.swift in Sources */,
 				DF0CCD422B089EA90058DE05 /* HomeView.swift in Sources */,
 				DF5CBD172B0BA1B9007DBFDF /* RoomViewModel.swift in Sources */,
