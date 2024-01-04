@@ -7,48 +7,39 @@ struct RoomDetailView: View {
     private let lightRows = [GridItem(.flexible(), spacing: 0)]
     
     var body: some View {
-        VStack(alignment: .leading) {
-            
-            Section(header:Text("Appearances"))
-            {
-                GeometryReader { geometry in
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        LazyHGrid(rows: appearanceRows, spacing: 0) {
-                            ForEach(room.appearances) { appearance in
-                                AppearanceView(appearance: appearance)
-                                    .padding()
-                                    .frame(maxWidth: geometry.size.width / 3.3)
-                                
-                            }
-                        }
+        VStack {
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHGrid(rows: appearanceRows, spacing: 10) {
+                    ForEach(room.appearances) { appearance in
+                        AppearanceView(appearance: appearance)
+                        
                     }
-                    .frame(height: 300)
-                    .background(Color(UIColor.systemGroupedBackground))
                 }
-                
             }
+            .frame(height: 260)
+            .background(Color(UIColor.systemGroupedBackground))
+            .padding(.leading, 10)
             
-            Section(header:Text("Lights"))
+            
+            ScrollView(.horizontal, showsIndicators: false)
             {
-                GeometryReader { geometry in
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        LazyHGrid(rows: lightRows, spacing: 0) {
-                            ForEach(room.lights) { light in
-                                LightView(light: light)
-                                    .padding()
-                                    .frame(maxWidth: geometry.size.width / 3.3)
-                            }
-                        }
+                LazyHGrid(rows: lightRows, spacing: 10, content: {
+                    ForEach(room.lights) { light in
+                        LightView(light: light)
+                            
                     }
-                    .frame(height: 200)
-                    .background(Color(UIColor.systemGroupedBackground))
-                }
-                
+                })
             }
-        
+            .frame(height: 260)
+            .background(Color(UIColor.systemGroupedBackground))
+            .padding(.leading, 10)
+    
+            
+            Spacer()
             
         }
         .background(Color(UIColor.systemGroupedBackground))
+        //.frame(width: .infinity, height: .infinity, alignment: .top)
         
         
     }
