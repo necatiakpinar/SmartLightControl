@@ -8,40 +8,69 @@ struct RoomDetailView: View {
     
     var body: some View {
         VStack {
-            ScrollView(.horizontal, showsIndicators: false) {
-                LazyHGrid(rows: appearanceRows, spacing: 10) {
-                    ForEach(room.appearances) { appearance in
-                        AppearanceView(appearance: appearance)
+            
+            NavigationView(content: {
+                List {
+                    Section(header: Text("Appearances"))
+                    {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            LazyHGrid(rows: appearanceRows, spacing: 10) {
+                                ForEach(room.appearances) { appearance in
+                                    AppearanceView(appearance: appearance)
+                                    
+                                }
+                            }
+                        }
+                        .listRowBackground(Color(UIColor.systemGroupedBackground))
                         
                     }
-                }
-            }
-            .frame(height: 260)
-            .background(Color(UIColor.systemGroupedBackground))
-            .padding(.leading, 10)
-            
-            
-            ScrollView(.horizontal, showsIndicators: false)
-            {
-                LazyHGrid(rows: lightRows, spacing: 10, content: {
-                    ForEach(room.lights) { light in
-                        LightView(light: light)
-                            
+                    .listRowSeparator(.hidden)
+                    
+                    
+                    Section(header: Text("Lights"))
+                    {
+                        ScrollView(.horizontal, showsIndicators: false)
+                        {
+                            LazyHGrid(rows: lightRows, spacing: 10, content: {
+                                ForEach(room.lights) { light in
+                                    LightView(light: light)
+                                    
+                                }
+                            })
+                        }
+                        .background(Color(UIColor.systemGroupedBackground))
+                        
                     }
-                })
-            }
-            .frame(height: 260)
-            .background(Color(UIColor.systemGroupedBackground))
-            .padding(.leading, 10)
-    
+                    .listRowBackground(Color(UIColor.systemGroupedBackground))
+                    .listRowSeparator(.hidden)
+                    
+                    Spacer()
+                        .listRowBackground(Color(UIColor.systemGroupedBackground))
+                        .listRowSeparator(.hidden)
+                    
+                }
+                .background(Color(UIColor.systemGroupedBackground))
+                .listStyle(PlainListStyle()) // Liste stilini özelleştirmek için listStyle kullanın
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(Color(UIColor.systemGroupedBackground))
+                .safeAreaInset(edge: .top ) {
+                    Text("")
+                                .font(.largeTitle)
+                                .foregroundStyle(.white)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(.orange)
+                }
+                
+                
+            })
             
-            Spacer()
+            
+            
             
         }
-        .background(Color(UIColor.systemGroupedBackground))
-        //.frame(width: .infinity, height: .infinity, alignment: .top)
         
-        
+    
     }
 }
 struct RoomDetailView_PreviewProvider: PreviewProvider{
