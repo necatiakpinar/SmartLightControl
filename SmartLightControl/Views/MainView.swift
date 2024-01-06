@@ -16,7 +16,6 @@ struct MainView: View {
                     .tag(2)
                 
             }
-            
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {}) {

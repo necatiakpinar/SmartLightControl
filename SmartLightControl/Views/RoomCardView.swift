@@ -22,7 +22,7 @@ struct RoomCardView:  View {
             Slider(value: $sliderValue, in: 0...100)
                 .accentColor(.white)
                 .onAppear {
-                    let progressCircleConfig = UIImage.SymbolConfiguration(scale: .small)
+                    let progressCircleConfig = UIImage.SymbolConfiguration(scale: .medium)
                     UISlider.appearance()
                         .setThumbImage(UIImage(systemName: "circle.fill",
                                                withConfiguration: progressCircleConfig), for: .normal)
