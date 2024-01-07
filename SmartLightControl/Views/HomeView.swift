@@ -22,9 +22,10 @@ struct HomeView: View {
                     }
                 }
                 .listRowInsets(EdgeInsets())
-                
+            
             }
             .navigationTitle("Home")
+            
             
         }
         // Background color should be applied to the List or NavigationView

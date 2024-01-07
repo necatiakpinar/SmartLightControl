@@ -25,6 +25,7 @@ struct AppearanceView: View {
                 .stroke(Color.gray,lineWidth: 1)
                 .shadow(color: .gray, radius: 5, x: 0, y: 0)
             )
+        .shadow(color: .gray, radius: 2, x: 0, y: 1)
         
         
     }

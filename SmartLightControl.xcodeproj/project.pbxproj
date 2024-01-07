@@ -17,6 +17,8 @@
 		DF0CCD462B08A7F90058DE05 /* RoomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0CCD452B08A7F90058DE05 /* RoomCardView.swift */; };
 		DF0CCD482B08A8440058DE05 /* BaseRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0CCD472B08A8440058DE05 /* BaseRoom.swift */; };
 		DF0CCD4A2B08A8CE0058DE05 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0CCD492B08A8CE0058DE05 /* Theme.swift */; };
+		DF0FCF8C2B494A6D00F2EC39 /* NACircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FCF8B2B494A6D00F2EC39 /* NACircularButton.swift */; };
+		DF21207B2B49A2CE00C5E569 /* AddAppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF21207A2B49A2CE00C5E569 /* AddAppearanceView.swift */; };
 		DF5CBD172B0BA1B9007DBFDF /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5CBD162B0BA1B9007DBFDF /* RoomViewModel.swift */; };
 		DF78249E2B0B64EA00C6EA52 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78249D2B0B64EA00C6EA52 /* RoomDetailView.swift */; };
 		DF7824A02B0B67B200C6EA52 /* AppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78249F2B0B67B200C6EA52 /* AppearanceView.swift */; };
@@ -37,6 +39,8 @@
 		DF0CCD452B08A7F90058DE05 /* RoomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCardView.swift; sourceTree = "<group>"; };
 		DF0CCD472B08A8440058DE05 /* BaseRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoom.swift; sourceTree = "<group>"; };
 		DF0CCD492B08A8CE0058DE05 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		DF0FCF8B2B494A6D00F2EC39 /* NACircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NACircularButton.swift; sourceTree = "<group>"; };
+		DF21207A2B49A2CE00C5E569 /* AddAppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppearanceView.swift; sourceTree = "<group>"; };
 		DF5CBD162B0BA1B9007DBFDF /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
 		DF78249D2B0B64EA00C6EA52 /* RoomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
 		DF78249F2B0B67B200C6EA52 /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 		DF0CCD2D2B0892D40058DE05 /* SmartLightControl */ = {
 			isa = PBXGroup;
 			children = (
+				DF0FCF8A2B494A0F00F2EC39 /* Customs */,
 				DF0CCD3E2B089A280058DE05 /* Models */,
 				DF0CCD3D2B089A1F0058DE05 /* Views */,
 				DF0CCD3C2B089A030058DE05 /* ViewModels */,
@@ -113,6 +118,7 @@
 				DF78249D2B0B64EA00C6EA52 /* RoomDetailView.swift */,
 				DF78249F2B0B67B200C6EA52 /* AppearanceView.swift */,
 				DFF4CE422B28DF060057FC8F /* LightView.swift */,
+				DF21207A2B49A2CE00C5E569 /* AddAppearanceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,6 +131,14 @@
 				DFF4CE402B28D7EB0057FC8F /* BaseLight.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DF0FCF8A2B494A0F00F2EC39 /* Customs */ = {
+			isa = PBXGroup;
+			children = (
+				DF0FCF8B2B494A6D00F2EC39 /* NACircularButton.swift */,
+			);
+			path = Customs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +214,10 @@
 				DF0CCD442B089EC00058DE05 /* SettingsView.swift in Sources */,
 				DF0CCD4A2B08A8CE0058DE05 /* Theme.swift in Sources */,
 				DF0CCD312B0892D40058DE05 /* ContentView.swift in Sources */,
+				DF0FCF8C2B494A6D00F2EC39 /* NACircularButton.swift in Sources */,
 				DF7824A22B0B9BCB00C6EA52 /* BaseAppearance.swift in Sources */,
 				DF78249E2B0B64EA00C6EA52 /* RoomDetailView.swift in Sources */,
+				DF21207B2B49A2CE00C5E569 /* AddAppearanceView.swift in Sources */,
 				DFF4CE432B28DF060057FC8F /* LightView.swift in Sources */,
 				DFF4CE412B28D7EB0057FC8F /* BaseLight.swift in Sources */,
 				DF7824A02B0B67B200C6EA52 /* AppearanceView.swift in Sources */,

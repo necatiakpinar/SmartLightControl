@@ -4,6 +4,8 @@ struct RoomDetailView: View {
     @Binding var room: BaseRoom
     @State private var isLightsToggleOn: Bool = false;
     @State private var generalLightSliderValue: Double = 50
+    @Environment(\.presentationMode) var presentationMode
+
     
     private let appearanceRows = [GridItem(.flexible(), spacing: 0), GridItem(.flexible(), spacing: 0)]
     private let lightRows = [GridItem(.flexible(), spacing: 0)]
@@ -14,16 +16,41 @@ struct RoomDetailView: View {
             NavigationView(content: {
                 List {
                     Spacer()
-                        .listRowBackground(Color(UIColor.systemGroupedBackground))
+                        .listRowBackground(Color("PrimaryColor"))
                         .listRowSeparator(.hidden)
                     Spacer()
-                        .listRowBackground(Color(UIColor.systemGroupedBackground))
+                        .listRowBackground(Color("PrimaryColor"))
                         .listRowSeparator(.hidden)
                     Spacer()
-                        .listRowBackground(Color(UIColor.systemGroupedBackground))
+                        .listRowBackground(Color("PrimaryColor"))
                         .listRowSeparator(.hidden)
                     
-                    Section(header: Text("Appearances"))
+                    Section(header:
+                                HStack{
+                        Text("Appearances")
+                            .foregroundColor(.gray)
+                        Spacer()
+                        
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "plus")
+                                .imageScale(.small)
+                            
+                        }
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .background(
+                            Circle()
+                                .fill(.blue)
+                                .frame(width: 35, height: 35)
+                            
+                        )
+                        .padding(.bottom, 5)
+                        
+                        
+                        }
+                    )
                     {
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHGrid(rows: appearanceRows, spacing: 10) {
@@ -33,13 +60,13 @@ struct RoomDetailView: View {
                                 }
                             }
                         }
-                        .listRowBackground(Color(UIColor.systemGroupedBackground))
+                        .listRowBackground(Color("PrimaryColor"))
                         
                     }
                     .listRowSeparator(.hidden)
                     
                     
-                    Section(header: Text("Lights"))
+                    Section(header: Text("Lights").foregroundColor(.gray))
                     {
                         ScrollView(.horizontal, showsIndicators: false)
                         {
@@ -50,21 +77,18 @@ struct RoomDetailView: View {
                                 }
                             })
                         }
-                        .background(Color(UIColor.systemGroupedBackground))
-                        
+                        .listRowBackground(Color("PrimaryColor"))
                     }
-                    .listRowBackground(Color(UIColor.systemGroupedBackground))
-                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color("PrimaryColor"))                    .listRowSeparator(.hidden)
                     
                     Spacer()
-                        .listRowBackground(Color(UIColor.systemGroupedBackground))
-                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color("PrimaryColor"))                        .listRowSeparator(.hidden)
                     
                 }
-                .background(Color(UIColor.systemGroupedBackground))
+                .background(Color("PrimaryColor"))
                 .listStyle(PlainListStyle()) // Liste stilini özelleştirmek için listStyle kullanın
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .background(Color(UIColor.systemGroupedBackground))
+                .background(Color("PrimaryColor"))
                 .ignoresSafeArea()
                 .safeAreaInset(edge: .top ) {
                     Rectangle()
@@ -79,22 +103,8 @@ struct RoomDetailView: View {
                             {
                                 HStack
                                 {
-                                    Button {
-                                        print("Button was tapped")
-                                    } label: {
-                                        Image(systemName: "arrow.left")
-                                            .imageScale(.small)
-                                        
-                                    }
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .background(
-                                        Circle()
-                                            .fill(.gray).opacity(0.4)
-                                            .frame(width: 35, height: 35)
-                                        
-                                    )
-                                    .padding(.leading, 20)
+                                    NACircularButton(imageName: "arrow.left", action: closeView)
+                                        .padding(.leading, 20)
                                     
                                     Text(room.name)
                                         .font(.callout)
@@ -106,22 +116,8 @@ struct RoomDetailView: View {
                                     
                                     
                                     Spacer()
-                                    Button {
-                                        print("Button was tapped")
-                                    } label: {
-                                        Image(systemName: "ellipsis")
-                                            .imageScale(.small)
-                                        
-                                    }
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .background(
-                                        Circle()
-                                            .fill(.gray).opacity(0.4)
-                                            .frame(width: 35, height: 35)
-                                        
-                                    )
-                                    .padding()
+                                    
+                                    NACircularButton(imageName: "ellipsis", action: nil)
                                     
                                     Toggle(isOn: $isLightsToggleOn) {}
                                         .toggleStyle(SwitchToggleStyle(tint: .gray))
@@ -129,12 +125,12 @@ struct RoomDetailView: View {
                                         .padding(.trailing, 20)
                                     
                                 }
-                            
+                                
                                 //.background(.red)
                                 
                                 ZStack {
                                     LinearGradient(colors: [.gray, .white],
-                                                                    startPoint: .leading, endPoint: .trailing)
+                                                   startPoint: .leading, endPoint: .trailing)
                                     
                                     .mask(Slider(value: $generalLightSliderValue, in: 0...100))
                                     .padding(.leading, 20)
@@ -164,6 +160,11 @@ struct RoomDetailView: View {
         }
         
         
+    }
+    
+    func closeView(){
+        presentationMode.wrappedValue.dismiss()
+
     }
 }
 struct RoomDetailView_PreviewProvider: PreviewProvider{
