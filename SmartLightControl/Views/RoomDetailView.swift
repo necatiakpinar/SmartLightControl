@@ -5,7 +5,7 @@ struct RoomDetailView: View {
     @State private var isLightsToggleOn: Bool = false;
     @State private var generalLightSliderValue: Double = 50
     @Environment(\.presentationMode) var presentationMode
-
+    
     
     private let appearanceRows = [GridItem(.flexible(), spacing: 0), GridItem(.flexible(), spacing: 0)]
     private let lightRows = [GridItem(.flexible(), spacing: 0)]
@@ -49,7 +49,7 @@ struct RoomDetailView: View {
                         .padding(.bottom, 5)
                         
                         
-                        }
+                    }
                     )
                     {
                         ScrollView(.horizontal, showsIndicators: false) {
@@ -68,21 +68,14 @@ struct RoomDetailView: View {
                     
                     Section(header: Text("Lights").foregroundColor(.gray))
                     {
-                        ScrollView(.horizontal, showsIndicators: false)
-                        {
-                            LazyHGrid(rows: lightRows, spacing: 10, content: {
-                                ForEach(room.lights) { light in
-                                    LightView(light: light)
-                                    
-                                }
-                            })
-                        }
-                        .listRowBackground(Color("PrimaryColor"))
+                        LightsView(room: $room)
                     }
-                    .listRowBackground(Color("PrimaryColor"))                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color("PrimaryColor"))
+                    .listRowSeparator(.hidden)
                     
                     Spacer()
-                        .listRowBackground(Color("PrimaryColor"))                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color("PrimaryColor"))
+                        .listRowSeparator(.hidden)
                     
                 }
                 .background(Color("PrimaryColor"))
@@ -132,21 +125,10 @@ struct RoomDetailView: View {
                                     LinearGradient(colors: [.gray, .white],
                                                    startPoint: .leading, endPoint: .trailing)
                                     
-                                    .mask(Slider(value: $generalLightSliderValue, in: 0...100))
-                                    .padding(.leading, 20)
-                                    .padding(.trailing, 20)
+                                    //.mask(Slider(value: $generalLightSliderValue, in: 0...100))
+                                    .mask(NASlider(value: $generalLightSliderValue))
                                     
-                                    Slider(value: $generalLightSliderValue, in: 0...100)
-                                        .opacity(0.5)
-                                        .accentColor(.white)
-                                        .padding(.leading, 20)
-                                        .padding(.trailing, 20)
-                                        .onAppear {
-                                            let progressCircleConfig = UIImage.SymbolConfiguration(scale: .medium)
-                                            UISlider.appearance()
-                                                .setThumbImage(UIImage(systemName: "circle.fill",
-                                                                       withConfiguration: progressCircleConfig), for: .normal)
-                                        }
+                                    NASlider(value: $generalLightSliderValue, opacity: 0.4)
                                 }
                                 
                             }
@@ -164,7 +146,7 @@ struct RoomDetailView: View {
     
     func closeView(){
         presentationMode.wrappedValue.dismiss()
-
+        
     }
 }
 struct RoomDetailView_PreviewProvider: PreviewProvider{

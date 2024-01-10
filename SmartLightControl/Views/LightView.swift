@@ -6,6 +6,8 @@ struct LightView: View {
     
     var topBodyColor = Color(#colorLiteral(red: 1, green: 0.585469064, blue: 0.007283347876, alpha: 1))
     var bottomBodyColor = Color(#colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1))
+    var disabledBodyColor = Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
+    var disabledBottomBodyColor = Color(#colorLiteral(red: 0.1296457852, green: 0.13403971, blue: 0.1354363952, alpha: 1))
     
     var body: some View {
         VStack(spacing: 20) {
@@ -13,7 +15,7 @@ struct LightView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 50, height: 50)
-                .background(topBodyColor)
+                .background(isToggleOn ? topBodyColor : disabledBodyColor)
                 .clipShape(Circle())
                 .padding(.top, 10)
             
@@ -27,7 +29,7 @@ struct LightView: View {
                 .background(
                     VStack {
                         RoundedRectangle(cornerRadius: 0)
-                            .fill(bottomBodyColor)
+                            .fill(isToggleOn ? bottomBodyColor : disabledBottomBodyColor)
                             .frame(width: 110, height: 55)
                             .clipShape(
                                 .rect(
@@ -44,10 +46,10 @@ struct LightView: View {
             
         }
         .frame(width: 110, height: 180)
-        .background(.orange)
+        .background(isToggleOn ? topBodyColor : disabledBodyColor)
         .foregroundColor(.white)
         .clipShape(RoundedRectangle(cornerRadius: 20))
-        .shadow(color: .gray, radius: 5, x: 0, y: 5)
+        .shadow(color: .gray, radius: 2, x: 0, y: 2)
         
         
         

@@ -25,6 +25,8 @@
 		DF7824A22B0B9BCB00C6EA52 /* BaseAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7824A12B0B9BCB00C6EA52 /* BaseAppearance.swift */; };
 		DFF4CE412B28D7EB0057FC8F /* BaseLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4CE402B28D7EB0057FC8F /* BaseLight.swift */; };
 		DFF4CE432B28DF060057FC8F /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4CE422B28DF060057FC8F /* LightView.swift */; };
+		DFF763F72B4EEB130088B95D /* NASlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF763F62B4EEB130088B95D /* NASlider.swift */; };
+		DFF763F92B4EFE920088B95D /* LightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF763F82B4EFE920088B95D /* LightsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		DF7824A12B0B9BCB00C6EA52 /* BaseAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppearance.swift; sourceTree = "<group>"; };
 		DFF4CE402B28D7EB0057FC8F /* BaseLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLight.swift; sourceTree = "<group>"; };
 		DFF4CE422B28DF060057FC8F /* LightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightView.swift; sourceTree = "<group>"; };
+		DFF763F62B4EEB130088B95D /* NASlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASlider.swift; sourceTree = "<group>"; };
+		DFF763F82B4EFE920088B95D /* LightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 				DF78249F2B0B67B200C6EA52 /* AppearanceView.swift */,
 				DFF4CE422B28DF060057FC8F /* LightView.swift */,
 				DF21207A2B49A2CE00C5E569 /* AddAppearanceView.swift */,
+				DFF763F82B4EFE920088B95D /* LightsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				DF0FCF8B2B494A6D00F2EC39 /* NACircularButton.swift */,
+				DFF763F62B4EEB130088B95D /* NASlider.swift */,
 			);
 			path = Customs;
 			sourceTree = "<group>";
@@ -222,9 +228,11 @@
 				DFF4CE412B28D7EB0057FC8F /* BaseLight.swift in Sources */,
 				DF7824A02B0B67B200C6EA52 /* AppearanceView.swift in Sources */,
 				DF0CCD422B089EA90058DE05 /* HomeView.swift in Sources */,
+				DFF763F72B4EEB130088B95D /* NASlider.swift in Sources */,
 				DF5CBD172B0BA1B9007DBFDF /* RoomViewModel.swift in Sources */,
 				DF0CCD402B089A700058DE05 /* MainView.swift in Sources */,
 				DF0CCD482B08A8440058DE05 /* BaseRoom.swift in Sources */,
+				DFF763F92B4EFE920088B95D /* LightsView.swift in Sources */,
 				DF0CCD2F2B0892D40058DE05 /* SmartLightControlApp.swift in Sources */,
 				DF0CCD462B08A7F90058DE05 /* RoomCardView.swift in Sources */,
 			);
