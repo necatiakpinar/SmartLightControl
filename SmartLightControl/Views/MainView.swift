@@ -2,13 +2,13 @@ import SwiftUI
 
 struct MainView: View {
     
-    @ObservedObject var rooms: RoomsViewModel
+    @ObservedObject var roomManager: RoomsViewModel
     @State private var activeTabIndex: Int = 1
     
     var body: some View {
         VStack {
             TabView(selection: $activeTabIndex) {
-                HomeView(rooms: $rooms.rooms)
+                HomeView(roomManager: roomManager)
                     .tabItem { Text("Home") }
                     .tag(1)
                 SettingsView()
@@ -32,10 +32,10 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
 
     static var previews: some View {
-        var userRooms: RoomsViewModel {
+        var roomManager: RoomsViewModel {
             return RoomsViewModel(rooms: BaseRoom.sampleData)
         }
         
-        MainView(rooms: userRooms)
+        MainView(roomManager: roomManager)
     }
 }

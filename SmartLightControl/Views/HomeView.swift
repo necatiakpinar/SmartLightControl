@@ -1,17 +1,17 @@
 import SwiftUI
 
 struct HomeView: View {
-    @Binding var rooms: [BaseRoom]
+    @StateObject var roomManager: RoomsViewModel
     
     var body: some View {
         NavigationView {
             List {
                 Section(header: Text("Rooms")) {
-                    ForEach($rooms) { $room in
+                    ForEach($roomManager.rooms) { $room in
                         ZStack {
                             RoomCardView(room: $room)
                             
-                            NavigationLink(destination: RoomDetailView(room: $room)) {
+                            NavigationLink(destination: RoomDetailView(room: $room, roomManager: roomManager)) {
                                 EmptyView()
                             }
                             .opacity(0)
@@ -34,7 +34,10 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(rooms: .constant(BaseRoom.sampleData))
+        var roomManager: RoomsViewModel {
+            return RoomsViewModel(rooms: BaseRoom.sampleData)
+        }
+        HomeView(roomManager: roomManager)
     }
 }
 

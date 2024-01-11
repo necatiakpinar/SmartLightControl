@@ -2,6 +2,8 @@ import SwiftUI
 
 struct RoomDetailView: View {
     @Binding var room: BaseRoom
+    @StateObject var roomManager: RoomsViewModel
+    
     @State private var isLightsToggleOn: Bool = false;
     @State private var generalLightSliderValue: Double = 50
     @Environment(\.presentationMode) var presentationMode
@@ -34,7 +36,7 @@ struct RoomDetailView: View {
                         Button {
                             
                         } label: {
-                            NavigationLink(destination: AddAppearanceView(room: $room)) {
+                            NavigationLink(destination: AddAppearanceView(room: $room, roomManager: roomManager)) {
                                 Image(systemName: "plus")
                                     .imageScale(.small)
                             }
@@ -153,6 +155,9 @@ struct RoomDetailView: View {
 }
 struct RoomDetailView_PreviewProvider: PreviewProvider{
     static var previews: some View {
-        RoomDetailView(room: .constant(BaseRoom.sampleData[0]))
+        var roomManager: RoomsViewModel {
+            return RoomsViewModel(rooms: BaseRoom.sampleData)
+        }
+        RoomDetailView(room: .constant(BaseRoom.sampleData[0]), roomManager: roomManager)
     }
 }

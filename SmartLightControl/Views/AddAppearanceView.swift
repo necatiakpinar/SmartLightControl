@@ -5,6 +5,7 @@ struct AddAppearanceView: View {
     let grayColor: UIColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     let bottomColor: UIColor = #colorLiteral(red: 0.0483843393, green: 0.05557405449, blue: 0.1199100379, alpha: 1)
     @Binding var room: BaseRoom
+    @StateObject var roomManager: RoomsViewModel
     
     @State private var SliderValue: Double = 0
     @State private var isSheetPresented = false
@@ -99,7 +100,7 @@ struct AddAppearanceView: View {
                         .ignoresSafeArea()
                         .frame(width: .infinity, height: 75)
                         .overlay(
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                            Button(action: {roomManager.addAppearance(room: room, appearance: BaseAppearance(name: appearanceName))}, label: {
                                 RoundedRectangle(cornerRadius: 20)
                                     .frame(width: 100, height: 40)
                                     .overlay{
@@ -127,6 +128,7 @@ struct AddAppearanceView: View {
         
     }
     
+    
     func enableSheet(){
         isSheetPresented = true
     }
@@ -140,6 +142,10 @@ struct AddAppearanceView: View {
 
 struct AddAppearanceView_Previews: PreviewProvider {
     static var previews: some View {
-        AddAppearanceView(room: .constant(BaseRoom.sampleData[0]))
+        var roomManager: RoomsViewModel {
+            return RoomsViewModel(rooms: BaseRoom.sampleData)
+        }
+        
+        AddAppearanceView(room: .constant(BaseRoom.sampleData[0]), roomManager: roomManager)
     }
 }

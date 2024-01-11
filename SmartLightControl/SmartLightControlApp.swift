@@ -16,7 +16,7 @@ struct SmartLightControlApp: App {
         }
         
         WindowGroup {
-            MainView(rooms: userRooms)
+            MainView(roomManager: userRooms)
         }
     }
 }
