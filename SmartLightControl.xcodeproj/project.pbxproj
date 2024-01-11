@@ -19,7 +19,7 @@
 		DF0CCD4A2B08A8CE0058DE05 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0CCD492B08A8CE0058DE05 /* Theme.swift */; };
 		DF0FCF8C2B494A6D00F2EC39 /* NACircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FCF8B2B494A6D00F2EC39 /* NACircularButton.swift */; };
 		DF21207B2B49A2CE00C5E569 /* AddAppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF21207A2B49A2CE00C5E569 /* AddAppearanceView.swift */; };
-		DF5CBD172B0BA1B9007DBFDF /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5CBD162B0BA1B9007DBFDF /* RoomViewModel.swift */; };
+		DF5CBD172B0BA1B9007DBFDF /* RoomsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5CBD162B0BA1B9007DBFDF /* RoomsViewModel.swift */; };
 		DF78249E2B0B64EA00C6EA52 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78249D2B0B64EA00C6EA52 /* RoomDetailView.swift */; };
 		DF7824A02B0B67B200C6EA52 /* AppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78249F2B0B67B200C6EA52 /* AppearanceView.swift */; };
 		DF7824A22B0B9BCB00C6EA52 /* BaseAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7824A12B0B9BCB00C6EA52 /* BaseAppearance.swift */; };
@@ -27,6 +27,7 @@
 		DFF4CE432B28DF060057FC8F /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4CE422B28DF060057FC8F /* LightView.swift */; };
 		DFF763F72B4EEB130088B95D /* NASlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF763F62B4EEB130088B95D /* NASlider.swift */; };
 		DFF763F92B4EFE920088B95D /* LightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF763F82B4EFE920088B95D /* LightsView.swift */; };
+		DFF763FB2B4F12380088B95D /* AppearanceNameEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF763FA2B4F12380088B95D /* AppearanceNameEditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +44,7 @@
 		DF0CCD492B08A8CE0058DE05 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DF0FCF8B2B494A6D00F2EC39 /* NACircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NACircularButton.swift; sourceTree = "<group>"; };
 		DF21207A2B49A2CE00C5E569 /* AddAppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppearanceView.swift; sourceTree = "<group>"; };
-		DF5CBD162B0BA1B9007DBFDF /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
+		DF5CBD162B0BA1B9007DBFDF /* RoomsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewModel.swift; sourceTree = "<group>"; };
 		DF78249D2B0B64EA00C6EA52 /* RoomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
 		DF78249F2B0B67B200C6EA52 /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
 		DF7824A12B0B9BCB00C6EA52 /* BaseAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppearance.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		DFF4CE422B28DF060057FC8F /* LightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightView.swift; sourceTree = "<group>"; };
 		DFF763F62B4EEB130088B95D /* NASlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASlider.swift; sourceTree = "<group>"; };
 		DFF763F82B4EFE920088B95D /* LightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsView.swift; sourceTree = "<group>"; };
+		DFF763FA2B4F12380088B95D /* AppearanceNameEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceNameEditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +109,7 @@
 		DF0CCD3C2B089A030058DE05 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				DF5CBD162B0BA1B9007DBFDF /* RoomViewModel.swift */,
+				DF5CBD162B0BA1B9007DBFDF /* RoomsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -124,6 +126,7 @@
 				DFF4CE422B28DF060057FC8F /* LightView.swift */,
 				DF21207A2B49A2CE00C5E569 /* AddAppearanceView.swift */,
 				DFF763F82B4EFE920088B95D /* LightsView.swift */,
+				DFF763FA2B4F12380088B95D /* AppearanceNameEditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -229,8 +232,9 @@
 				DF7824A02B0B67B200C6EA52 /* AppearanceView.swift in Sources */,
 				DF0CCD422B089EA90058DE05 /* HomeView.swift in Sources */,
 				DFF763F72B4EEB130088B95D /* NASlider.swift in Sources */,
-				DF5CBD172B0BA1B9007DBFDF /* RoomViewModel.swift in Sources */,
+				DF5CBD172B0BA1B9007DBFDF /* RoomsViewModel.swift in Sources */,
 				DF0CCD402B089A700058DE05 /* MainView.swift in Sources */,
+				DFF763FB2B4F12380088B95D /* AppearanceNameEditView.swift in Sources */,
 				DF0CCD482B08A8440058DE05 /* BaseRoom.swift in Sources */,
 				DFF763F92B4EFE920088B95D /* LightsView.swift in Sources */,
 				DF0CCD2F2B0892D40058DE05 /* SmartLightControlApp.swift in Sources */,

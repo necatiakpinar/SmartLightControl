@@ -16,7 +16,7 @@ struct AppearanceView: View {
             Text(appearance.name).bold().font(.system(size: 13))
             
         }
-        .frame(width: 110, height: 120)
+        .frame(width: 90, height: 100)
         .background(Theme.ColorScheme.primary.color)
         .foregroundColor(.white)
         .clipShape(RoundedRectangle(cornerRadius: 20))

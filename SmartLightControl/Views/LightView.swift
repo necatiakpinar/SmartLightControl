@@ -17,11 +17,11 @@ struct LightView: View {
                 .frame(width: 50, height: 50)
                 .background(isToggleOn ? topBodyColor : disabledBodyColor)
                 .clipShape(Circle())
-                .padding(.top, 10)
+                .padding(.top, 20)
             
             Text(light.name).bold().font(.system(size: 13))
-                .padding(.bottom,10)
-            
+                .padding(.bottom, 5)
+                
             
             Toggle(isOn: $isToggleOn) {}
                 .toggleStyle(SwitchToggleStyle(tint: .gray))
@@ -43,19 +43,16 @@ struct LightView: View {
                     
                 )
             
-            
+                
+            Spacer()
         }
-        .frame(width: 110, height: 180)
+        .frame(width: 90, height: 150)
         .background(isToggleOn ? topBodyColor : disabledBodyColor)
         .foregroundColor(.white)
         .clipShape(RoundedRectangle(cornerRadius: 20))
-        .shadow(color: .gray, radius: 2, x: 0, y: 2)
-        
-        
-        
+        .shadow(color: .gray, radius: 2, x: 0, y: 5)
         
     }
-    
     
 }
 

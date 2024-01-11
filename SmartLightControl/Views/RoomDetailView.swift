@@ -34,8 +34,10 @@ struct RoomDetailView: View {
                         Button {
                             
                         } label: {
-                            Image(systemName: "plus")
-                                .imageScale(.small)
+                            NavigationLink(destination: AddAppearanceView(room: $room)) {
+                                Image(systemName: "plus")
+                                    .imageScale(.small)
+                            }
                             
                         }
                         .font(.title)
@@ -126,9 +128,9 @@ struct RoomDetailView: View {
                                                    startPoint: .leading, endPoint: .trailing)
                                     
                                     //.mask(Slider(value: $generalLightSliderValue, in: 0...100))
-                                    .mask(NASlider(value: $generalLightSliderValue))
+                                    .mask(NASlider(value: $generalLightSliderValue, disabled: false))
                                     
-                                    NASlider(value: $generalLightSliderValue, opacity: 0.4)
+                                    NASlider(value: $generalLightSliderValue, opacity: 0.4, disabled: false)
                                 }
                                 
                             }

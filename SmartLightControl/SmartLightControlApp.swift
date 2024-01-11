@@ -10,8 +10,13 @@ import SwiftUI
 @main
 struct SmartLightControlApp: App {
     var body: some Scene {
+        
+        var userRooms: RoomsViewModel {
+            return RoomsViewModel(rooms: BaseRoom.sampleData)
+        }
+        
         WindowGroup {
-            MainView(rooms: .constant(BaseRoom.sampleData))
+            MainView(rooms: userRooms)
         }
     }
 }

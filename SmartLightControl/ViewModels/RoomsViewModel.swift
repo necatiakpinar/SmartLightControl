@@ -1,32 +1,32 @@
 import Foundation
 import Combine
 
-class RoomsViewModel {
-    @Published var appearances: [BaseAppearance] = []
+class RoomsViewModel: ObservableObject {
+    @Published var rooms: [BaseRoom] = []
     
-    init(appearances: [BaseAppearance]) {
-        self.appearances = appearances
+    init(rooms: [BaseRoom]) {
+        self.rooms = rooms
     }
     
-    func addAppearance(appearance: BaseAppearance)
+    func addAppearance(room: BaseRoom, appearance: BaseAppearance)
     {
-        if (appearances.contains(appearance)) {
+        if (room.appearances.contains(appearance)) {
             return
         }
         
-        appearances.append(appearance)
+        room.appearances.append(appearance)
         print("\(appearance.name) has been ADDED to your collection!")
         
     }
     
-    func removeGame(appearance: BaseAppearance) {
-        if let index = appearances.firstIndex(of: appearance) {
-            appearances.remove(at: index)
+    func removeGame(room: BaseRoom, appearance: BaseAppearance) {
+        if let index = room.appearances.firstIndex(of: appearance) {
+            room.appearances.remove(at: index)
             print("\(appearance.name) has been REMOVED to your collection!")
         }
     }
     
-    func hasGame(appearance: BaseAppearance) -> Bool {
-        return appearances.contains(appearance)
+    func hasGame(room: BaseRoom, appearance: BaseAppearance) -> Bool {
+        return room.appearances.contains(appearance)
     }
 }
